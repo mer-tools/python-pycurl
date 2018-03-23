@@ -1,0 +1,8 @@
+* Mon Nov 16 2009 Passion Zhao <passion.zhao@intel.com> - 7.19.0
+- Fix the build error -lcrypto
+
+* Wed Sep 30 2009 Anas Nashif <anas.nashif@intel.com> - 7.19.0
+- Import into moblin
+
+* Wed Sep 30 2009 Anas Nashif <anas.nashif@intel.com> - 7.19.0
+- Initial import into Moblin
