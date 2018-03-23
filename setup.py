@@ -97,8 +97,7 @@ else:
         else:
             extra_compile_args.append(e)
     libs = split_quoted(
-        os.popen("'%s' --libs" % CURL_CONFIG).read()+\
-        os.popen("'%s' --static-libs" % CURL_CONFIG).read())
+        os.popen("'%s' --libs" % CURL_CONFIG).read())
     for e in libs:
         if e[:2] == "-l":
             libraries.append(e[2:])
@@ -113,6 +112,7 @@ else:
     for e in split_quoted(os.popen("'%s' --features" % CURL_CONFIG).read()):
         if e == 'SSL':
             define_macros.append(('HAVE_CURL_SSL', 1))
+    libraries.append("crypto")
     if not libraries:
         libraries.append("curl")
     # Add extra compile flag for MacOS X
